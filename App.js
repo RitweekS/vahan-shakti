@@ -1,20 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, StatusBar, SafeAreaView } from 'react-native';
+import WebView from 'react-native-webview';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  // const url = "http://www.thexyz.biz:8789/"
+  const url = "http://uat.vahanshakti.in/"
+
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar translucent backgroundColor="white" barStyle="dark-content" />
+      <View style={{ flex: 1 }}>
+        <WebView
+          source={{ uri: url }}
+          style={{ flex: 1, marginTop: StatusBar.currentHeight }}
+        />
+      </View>
+    </SafeAreaView>
+  )
+}
