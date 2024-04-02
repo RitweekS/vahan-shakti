@@ -16,7 +16,8 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "io.vahan-shakti.com"
+      "bundleIdentifier": "io.vahan-shakti.com",
+       "minimumVersion": "12.0"
     },
     "android": {
       "adaptiveIcon": {

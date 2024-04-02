@@ -1,18 +1,19 @@
 {
   "cli": {
-    "version": ">= 5.9.3",
-    "requireCommit": true
+    "version": ">= 7.6.2"
   },
   "build": {
-    "production": {
-      "developmentClient": false,
-      "android": {
-        "buildType": "apk"
-      },
-       "ios": {
-        
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios":{
+        "simulator": true
       }
-    }
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {}
   },
   "submit": {
     "production": {}
