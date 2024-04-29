@@ -17,7 +17,19 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "io.vahan-shakti.com",
-       "minimumVersion": "12.0"
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": false,
+          "NSExceptionDomains": {
+            "yourdomain.com": {
+              "NSExceptionAllowsInsecureHTTPLoads": false,
+              "NSIncludesSubdomains": true,
+              "NSTemporaryExceptionAllowsInsecureHTTPLoads": false,
+              "NSTemporaryExceptionAllowsInsecureHTTPLoadsInWebContent": false
+            }
+          }
+        }
+      }
     },
     "android": {
       "adaptiveIcon": {
